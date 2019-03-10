@@ -96,60 +96,61 @@ Aggregates of amyloid proteins are causes of neurodegenerative disorders. Using 
 
 \begin{block}{Scheme}
 \begin{figure} 
-\includegraphics[width=0.78\columnwidth]{static_figure/ngram_scheme_poster.eps}
+\includegraphics[width=0.85\columnwidth]{static_figure/ngram_scheme_poster.eps}
 \end{figure}
 
     \end{block}
 
 
-\begin{block}{Results of cross-validation}
+% \begin{block}{Results of cross-validation}
+% 
+% The amyloidogenicity of a given peptide may not depend on the exact sequence of 
+% amino acids but on its more general properties. 
+% Henceforth, we created 524,284 amino acid reduced alphabets (from three to six letters) based on physicochemical properties relevant to amyloidogenicity. 
+% 
+% Distribution of mean AUC values of classifiers with various encodings 
+% for every possible combination of training and testing data set including 
+% different lengths of sequences. 
+% 
+% <<echo = FALSE,message=FALSE,fig.align='center',fig.width=14,fig.height=6,warning=FALSE>>=
+% amyloids_plot <- read.csv("amyloid_plot_data.csv")
+% 
+% ggplot(amyloids_plot, aes(x = len_range, y = AUC_mean)) +
+%   geom_boxplot(outlier.color = "grey", outlier.shape = 1) +
+%   geom_point(data = filter(amyloids_plot, et != "Encoding"), 
+%              aes(x = len_range, y = AUC_mean, color = et, shape = et), size = 4) +
+%   scale_x_discrete("") +
+%   scale_y_continuous("Mean AUC") +
+%   scale_shape_manual("", values = c(16, 1, 15, 15), drop = FALSE) +
+%   scale_color_manual("", values = c("red", "grey", "green", "blue"), drop = FALSE) +
+%   facet_wrap(~ pos, nrow = 3) +
+%   my_theme +
+%   coord_flip()
+% @
+% 
+% \tiny
+% The 
+% gray circles correspond to the encodings with the AUC outside the 0.95 
+% confidence interval.
+% 
+% \normalsize	
+% \bigskip
+% The predictor based on the best-performing encoding reached the highest AUC (0.8667) 
+% in classification of the shortest sequences (with the length of 6 residues).
+% 
+% \bigskip
+% 
+% Classifiers based on the full (i.e., unreduced) amino acid alphabet never predicted 
+% amyloidogenicity better than the best classifier based on the reduced alphabet. 
+% 
+% \bigskip
+% 
+% The standard encodings found in the literature performed worse than other 
+% analyzed encodings in most categories.
+% 
+% \end{block}
 
-The amyloidogenicity of a given peptide may not depend on the exact sequence of 
-amino acids but on its more general properties. 
-Henceforth, we created 524,284 amino acid reduced alphabets (from three to six letters) based on physicochemical properties relevant to amyloidogenicity. 
-
-Distribution of mean AUC values of classifiers with various encodings 
-for every possible combination of training and testing data set including 
-different lengths of sequences. 
-
-<<echo = FALSE,message=FALSE,fig.align='center',fig.width=14,fig.height=6,warning=FALSE>>=
-amyloids_plot <- read.csv("amyloid_plot_data.csv")
-
-ggplot(amyloids_plot, aes(x = len_range, y = AUC_mean)) +
-  geom_boxplot(outlier.color = "grey", outlier.shape = 1) +
-  geom_point(data = filter(amyloids_plot, et != "Encoding"), 
-             aes(x = len_range, y = AUC_mean, color = et, shape = et), size = 4) +
-  scale_x_discrete("") +
-  scale_y_continuous("Mean AUC") +
-  scale_shape_manual("", values = c(16, 1, 15, 15), drop = FALSE) +
-  scale_color_manual("", values = c("red", "grey", "green", "blue"), drop = FALSE) +
-  facet_wrap(~ pos, nrow = 3) +
-  my_theme +
-  coord_flip()
-@
-
-\tiny
-The 
-gray circles correspond to the encodings with the AUC outside the 0.95 
-confidence interval.
-
-\normalsize	
-\bigskip
-The predictor based on the best-performing encoding reached the highest AUC (0.8667) 
-in classification of the shortest sequences (with the length of 6 residues).
-
-\bigskip
-
-Classifiers based on the full (i.e., unreduced) amino acid alphabet never predicted 
-amyloidogenicity better than the best classifier based on the reduced alphabet. 
-
-\bigskip
-
-The standard encodings found in the literature performed worse than other 
-analyzed encodings in most categories.
-
-\end{block}
-\vfill
+% \vfill
 
 
 % \begin{block}{Quick Permutation Test (QuiPT)}
@@ -177,28 +178,8 @@ analyzed encodings in most categories.
 
 \vfill
 
-
-
-
-}
-\end{minipage}
-\end{beamercolorbox}
-\end{column}
-
-
-%new column ------------------------------------------------------    
-
-\begin{column}{.48\textwidth}
-\begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
-\begin{minipage}[T]{.95\textwidth}  
-\parbox[t][\columnheight]{\textwidth}
-{
-
-
-
-
 \begin{block}{Informative n-grams}
-<<echo = FALSE,message=FALSE,fig.align='center',fig.width=14,fig.height=8,warning=FALSE>>=
+<<echo = FALSE,message=FALSE,fig.align='center',fig.width=15.5,fig.height=9.5,warning=FALSE>>=
 ngram_freq <- read.csv("ngram_freq.csv")
 
 gr_aa <- encoding2df(AmyloGram::AmyloGram_model[["enc"]]) %>% 
@@ -243,8 +224,22 @@ denote n-grams occurring in motifs found in respectively amyloidogenic and
 non-amyloidogenic sequences~\citep{paz_sequence_2004}.
 
 \end{block}
-\vfill
 
+
+
+}
+\end{minipage}
+\end{beamercolorbox}
+\end{column}
+
+
+%new column ------------------------------------------------------    
+
+\begin{column}{.48\textwidth}
+\begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
+\begin{minipage}[T]{.95\textwidth}  
+\parbox[t][\columnheight]{\textwidth}
+{
 
 
 \begin{block}{Benchmark results}
@@ -390,6 +385,20 @@ intensity_plot_lines
 \vfill
 
 
+\begin{block}{MspA - new amyloid protein found by AmyloGram}
+
+\begin{figure} 
+\includegraphics[width=0.9\columnwidth]{static_figure/mspa.png}
+\end{figure}
+
+MspA has regularly spaced amyloidogenic regions. MspA (WP\_011449234.1) sequence was analysed \citep{christensen_sheaths_2018} with AmyloGram \citep{burdukiewicz_amyloidogenic_2017}. It revealed several regions of predicted high amyloidogenicity (above the horizontal lines). The red vertical line indicates the signal peptide cleavage site position.
+
+
+
+
+\end{block}
+\vfill
+
 \begin{block}{Summary and funding}
 Thanks to the reduction of the amino acid alphabet and description of peptides by 
 short sub-sequences (n-grams), we were able to create the efficient predictor 
@@ -399,14 +408,11 @@ of amyloidogenic sequences called AmyloGram.
 
 Our software is avaible as a web-server: \url{www.smorfland.uni.wroc.pl/shiny/AmyloGram/} and \textbf{R} package: \url{https://cran.r-project.org/package=AmyloGram}.
 
-% \bigskip
-% 
-% Find us online: \url{https://github.com/michbur/USER2017}.
-
 \small{This research was partially funded by the KNOW Consortium and National Science Center (2015/17/N/NZ2/01845).}
 
 \end{block}
 \vfill
+
 
  \begin{block}{Bibliography}
   \tiny{
@@ -414,7 +420,7 @@ Our software is avaible as a web-server: \url{www.smorfland.uni.wroc.pl/shiny/Am
   \bibliography{references}
   }
   \end{block}
-  \vfill  
+  \vfill
 
 
 }
