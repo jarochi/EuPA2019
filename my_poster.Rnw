@@ -90,7 +90,7 @@ library(DT)
 
 % Amyloids are proteins associated with the number of clinical disorders (e.g., Alzheimer's, Creutzfeldt-Jakob's and Huntington's diseases). Despite their diversity, all amyloid proteins can undergo aggregation initiated by 6- to \mbox{15-residue} segments called hot spots. To find the patterns defining the hot-spots, we trained predictors of amyloidogenicity based on random forests using short subsequences (n-grams) extracted from amyloidogenic and non-amyloidogenic peptides collected in the AmyLoad database.
 
-Aggregates of amyloid proteins are causes of neurodegenerative disorders. Using easy interpreting features we trained a novel algorithm, AmyloGram, for detection of amyloids. In comparison to other methods predicting amyloids our software achieved the highest performance. Additionally, we have experimentally confirmed that AmyloGram is able to detect false negatives (amyloid proteins wrongly annotated as non-amyloids) in its training data set.
+Aggregates of amyloid proteins are causes of neurodegenerative disorders. Using easy interpreting features we trained a novel algorithm, AmyloGram, for detection of amyloids. In comparison to other methods predicting amyloids, our software achieved the highest performance. Additionally, we have experimentally confirmed that AmyloGram is able to detect false negatives (amyloid proteins wrongly annotated as non-amyloids) in its training data set.
 
     \end{block}
 
@@ -391,7 +391,7 @@ intensity_plot_lines
 \includegraphics[width=0.9\columnwidth]{static_figure/mspa.png}
 \end{figure}
 
-MspA has regularly spaced amyloidogenic regions. MspA (WP\_011449234.1) sequence was analysed \citep{christensen_sheaths_2018} with AmyloGram \citep{burdukiewicz_amyloidogenic_2017}. It revealed several regions of predicted high amyloidogenicity (above the horizontal lines). The red vertical line indicates the signal peptide cleavage site position.
+MspA has regularly spaced amyloidogenic regions. MspA (WP\_011449234.1) sequence was analysed by \cite{christensen_sheaths_2018} with AmyloGram \citep{burdukiewicz_amyloidogenic_2017}. It revealed several regions of predicted high amyloidogenicity (above the horizontal lines). The red vertical line indicates the signal peptide cleavage site position.
 
 
 
