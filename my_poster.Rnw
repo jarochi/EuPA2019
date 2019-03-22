@@ -388,19 +388,18 @@ intensity_plot_lines
 \begin{block}{MspA - new amyloid protein found by AmyloGram}
 
 \begin{figure} 
-\includegraphics[width=0.9\columnwidth]{static_figure/mspa.png}
+\includegraphics[width=0.85\columnwidth]{static_figure/mspa.png}
 \end{figure}
 
-MspA (WP\_011449234.1) has regularly spaced amyloidogenic regions. Protein sequence was analysed by \cite{christensen_sheaths_2018} using AmyloGram \citep{burdukiewicz_amyloidogenic_2017}. It revealed several regions of predicted high amyloidogenicity (above the horizontal lines). The red vertical line indicates the signal peptide cleavage site position.
 
-
+The whole proteom was analysed in silico using AmyloGram \citep{burdukiewicz_amyloidogenic_2017}. It has found MspA protein (WP\_011449234.1) \citep{christensen_sheaths_2018}, which has several regions of predicted high amyloidogenicity (above the blue, horizontal line). The red vertical line indicates the signal peptide cleavage site position. The experimental studies confirmed protein amyloid features.  
 
 
 \end{block}
 \vfill
 
 \begin{block}{Summary and funding}
-Thanks to the reduction of the amino acid alphabet and description of peptides by 
+Thanks to the simplification of the amino acid alphabet and description of peptides by 
 short sub-sequences (n-grams), we were able to create the efficient predictor 
 of amyloidogenic sequences called AmyloGram.
 
