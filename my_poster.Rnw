@@ -269,6 +269,7 @@ The predictor based on the best-performing alphabet, called AmyloGram, was bench
 
 Using AmyloGram we analyzed all 34 peptides from AmyLoad database. 23 peptides were predicted by AmyloGram otherwise than described in AmyloGram. Hexamers were validated experimentally using ThT assay.
 
+
 <<echo = FALSE,message=FALSE,fig.align='center',fig.width=14,fig.height=7,warning=FALSE>>=
 
 library(dplyr)
@@ -388,11 +389,16 @@ intensity_plot_lines
 \begin{block}{MspA - new amyloid protein found by AmyloGram}
 
 \begin{figure} 
-\includegraphics[width=0.85\columnwidth]{static_figure/mspa.png}
+\includegraphics[width=0.78\columnwidth]{static_figure/mspa.png}
 \end{figure}
 
+The \textit{Methanospirillum hungatei} JF-1 proteom was analysed in silico by \cite{christensen_sheaths_2018}. AmyloGram \citep{burdukiewicz_amyloidogenic_2017} pointed MspA protein (WP\_011449234.1) as potential amyloid. AmyloGram have found several regions of predicted high amyloidogenicity (above the blue, horizontal line). 
 
-The whole proteom was analysed in silico using AmyloGram \citep{burdukiewicz_amyloidogenic_2017}. It has found MspA protein (WP\_011449234.1) \citep{christensen_sheaths_2018}, which has several regions of predicted high amyloidogenicity (above the blue, horizontal line). The red vertical line indicates the signal peptide cleavage site position. The experimental studies confirmed protein amyloid features.  
+Protein was validated experimentally using TEM and FTIR.
+
+The red vertical line indicates the signal peptide cleavage site position.
+
+% The whole bacterial proteom was analysed in silico using AmyloGram \citep{burdukiewicz_amyloidogenic_2017}. It has found MspA protein (WP\_011449234.1) \citep{christensen_sheaths_2018}, which has several regions of predicted high amyloidogenicity (above the blue, horizontal line). The red vertical line indicates the signal peptide cleavage site position. The experimental studies confirmed protein amyloid features.  
 
 
 \end{block}
