@@ -391,7 +391,7 @@ intensity_plot_lines
 \includegraphics[width=0.9\columnwidth]{static_figure/mspa.png}
 \end{figure}
 
-MspA (WP\_011449234.1) has regularly spaced amyloidogenic regions. It's sequence was analysed by \cite{christensen_sheaths_2018} using AmyloGram \citep{burdukiewicz_amyloidogenic_2017}. It revealed several regions of predicted high amyloidogenicity (above the horizontal lines). The red vertical line indicates the signal peptide cleavage site position.
+MspA (WP\_011449234.1) has regularly spaced amyloidogenic regions. Protein sequence was analysed by \cite{christensen_sheaths_2018} using AmyloGram \citep{burdukiewicz_amyloidogenic_2017}. It revealed several regions of predicted high amyloidogenicity (above the horizontal lines). The red vertical line indicates the signal peptide cleavage site position.
 
 
 
